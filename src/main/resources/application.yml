@@ -1,0 +1,14 @@
+
+
+producer:
+  kafka:
+    topic: customer-topic
+    bootstrap-servers: http://localhost:9092
+    schema-registry-url: http://localhost:8081
+    acks: all
+    retries: 4
+    retry.backoff.ms: 10000
+    max.block.ms: 6000
+    delivery.timeout.ms: 40000
+    reconnect.backoff.ms: 50000
+    reconnect.backoff.max.ms: 100000

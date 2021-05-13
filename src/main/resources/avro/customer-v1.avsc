@@ -1,6 +1,6 @@
 {
      "type": "record",
-     "namespace": "com.helloWorld.hbk",
+     "namespace": "com.helloWorld",
      "name": "CustomerV1",
      "fields": [
        { "name": "firstName", "type": "string", "doc": "First Name of Customer" },

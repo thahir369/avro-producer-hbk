@@ -13,8 +13,8 @@ import org.apache.avro.specific.SpecificData;
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class CustomerV2 extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -6831065594937074243L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"CustomerV2\",\"namespace\":\"com.helloWorld.hbk\",\"fields\":[{\"name\":\"firstName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"First Name of Customer\"},{\"name\":\"lastName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"Last Name of Customer\"},{\"name\":\"age\",\"type\":\"int\",\"doc\":\"Age at the time of registration\"},{\"name\":\"height\",\"type\":\"float\",\"doc\":\"Height at the time of registration in cm\"},{\"name\":\"weight\",\"type\":\"float\",\"doc\":\"Weight at the time of registration in kg\"},{\"name\":\"phoneNumber\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"doc\":\"optional phone number\",\"default\":null},{\"name\":\"email\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"email address\",\"default\":\"missing@example.com\"}]}");
+  private static final long serialVersionUID = 5972129933747053336L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"CustomerV2\",\"namespace\":\"com.helloWorld\",\"fields\":[{\"name\":\"firstName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"First Name of Customer\"},{\"name\":\"lastName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"Last Name of Customer\"},{\"name\":\"age\",\"type\":\"int\",\"doc\":\"Age at the time of registration\"},{\"name\":\"height\",\"type\":\"float\",\"doc\":\"Height at the time of registration in cm\"},{\"name\":\"weight\",\"type\":\"float\",\"doc\":\"Weight at the time of registration in kg\"},{\"name\":\"phoneNumber\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"doc\":\"optional phone number\",\"default\":null},{\"name\":\"email\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"email address\",\"default\":\"missing@example.com\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -190,8 +190,8 @@ public class CustomerV2 extends org.apache.avro.specific.SpecificRecordBase impl
    * Creates a new CustomerV2 RecordBuilder.
    * @return A new CustomerV2 RecordBuilder
    */
-  public static Builder newBuilder() {
-    return new Builder();
+  public static CustomerV2.Builder newBuilder() {
+    return new CustomerV2.Builder();
   }
 
   /**
@@ -199,8 +199,8 @@ public class CustomerV2 extends org.apache.avro.specific.SpecificRecordBase impl
    * @param other The existing builder to copy.
    * @return A new CustomerV2 RecordBuilder
    */
-  public static Builder newBuilder(Builder other) {
-    return new Builder(other);
+  public static CustomerV2.Builder newBuilder(CustomerV2.Builder other) {
+    return new CustomerV2.Builder(other);
   }
 
   /**
@@ -208,8 +208,8 @@ public class CustomerV2 extends org.apache.avro.specific.SpecificRecordBase impl
    * @param other The existing instance to copy.
    * @return A new CustomerV2 RecordBuilder
    */
-  public static Builder newBuilder(CustomerV2 other) {
-    return new Builder(other);
+  public static CustomerV2.Builder newBuilder(CustomerV2 other) {
+    return new CustomerV2.Builder(other);
   }
 
   /**
@@ -242,7 +242,7 @@ public class CustomerV2 extends org.apache.avro.specific.SpecificRecordBase impl
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(Builder other) {
+    private Builder(CustomerV2.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.firstName)) {
         this.firstName = data().deepCopy(fields()[0].schema(), other.firstName);
@@ -325,7 +325,7 @@ public class CustomerV2 extends org.apache.avro.specific.SpecificRecordBase impl
       * @param value The value of 'firstName'.
       * @return This builder.
       */
-    public Builder setFirstName(String value) {
+    public CustomerV2.Builder setFirstName(String value) {
       validate(fields()[0], value);
       this.firstName = value;
       fieldSetFlags()[0] = true;
@@ -347,7 +347,7 @@ public class CustomerV2 extends org.apache.avro.specific.SpecificRecordBase impl
       * First Name of Customer
       * @return This builder.
       */
-    public Builder clearFirstName() {
+    public CustomerV2.Builder clearFirstName() {
       firstName = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -368,7 +368,7 @@ public class CustomerV2 extends org.apache.avro.specific.SpecificRecordBase impl
       * @param value The value of 'lastName'.
       * @return This builder.
       */
-    public Builder setLastName(String value) {
+    public CustomerV2.Builder setLastName(String value) {
       validate(fields()[1], value);
       this.lastName = value;
       fieldSetFlags()[1] = true;
@@ -390,7 +390,7 @@ public class CustomerV2 extends org.apache.avro.specific.SpecificRecordBase impl
       * Last Name of Customer
       * @return This builder.
       */
-    public Builder clearLastName() {
+    public CustomerV2.Builder clearLastName() {
       lastName = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -411,7 +411,7 @@ public class CustomerV2 extends org.apache.avro.specific.SpecificRecordBase impl
       * @param value The value of 'age'.
       * @return This builder.
       */
-    public Builder setAge(int value) {
+    public CustomerV2.Builder setAge(int value) {
       validate(fields()[2], value);
       this.age = value;
       fieldSetFlags()[2] = true;
@@ -433,7 +433,7 @@ public class CustomerV2 extends org.apache.avro.specific.SpecificRecordBase impl
       * Age at the time of registration
       * @return This builder.
       */
-    public Builder clearAge() {
+    public CustomerV2.Builder clearAge() {
       fieldSetFlags()[2] = false;
       return this;
     }
@@ -453,7 +453,7 @@ public class CustomerV2 extends org.apache.avro.specific.SpecificRecordBase impl
       * @param value The value of 'height'.
       * @return This builder.
       */
-    public Builder setHeight(float value) {
+    public CustomerV2.Builder setHeight(float value) {
       validate(fields()[3], value);
       this.height = value;
       fieldSetFlags()[3] = true;
@@ -475,7 +475,7 @@ public class CustomerV2 extends org.apache.avro.specific.SpecificRecordBase impl
       * Height at the time of registration in cm
       * @return This builder.
       */
-    public Builder clearHeight() {
+    public CustomerV2.Builder clearHeight() {
       fieldSetFlags()[3] = false;
       return this;
     }
@@ -495,7 +495,7 @@ public class CustomerV2 extends org.apache.avro.specific.SpecificRecordBase impl
       * @param value The value of 'weight'.
       * @return This builder.
       */
-    public Builder setWeight(float value) {
+    public CustomerV2.Builder setWeight(float value) {
       validate(fields()[4], value);
       this.weight = value;
       fieldSetFlags()[4] = true;
@@ -517,7 +517,7 @@ public class CustomerV2 extends org.apache.avro.specific.SpecificRecordBase impl
       * Weight at the time of registration in kg
       * @return This builder.
       */
-    public Builder clearWeight() {
+    public CustomerV2.Builder clearWeight() {
       fieldSetFlags()[4] = false;
       return this;
     }
@@ -537,7 +537,7 @@ public class CustomerV2 extends org.apache.avro.specific.SpecificRecordBase impl
       * @param value The value of 'phoneNumber'.
       * @return This builder.
       */
-    public Builder setPhoneNumber(String value) {
+    public CustomerV2.Builder setPhoneNumber(String value) {
       validate(fields()[5], value);
       this.phoneNumber = value;
       fieldSetFlags()[5] = true;
@@ -559,7 +559,7 @@ public class CustomerV2 extends org.apache.avro.specific.SpecificRecordBase impl
       * optional phone number
       * @return This builder.
       */
-    public Builder clearPhoneNumber() {
+    public CustomerV2.Builder clearPhoneNumber() {
       phoneNumber = null;
       fieldSetFlags()[5] = false;
       return this;
@@ -580,7 +580,7 @@ public class CustomerV2 extends org.apache.avro.specific.SpecificRecordBase impl
       * @param value The value of 'email'.
       * @return This builder.
       */
-    public Builder setEmail(String value) {
+    public CustomerV2.Builder setEmail(String value) {
       validate(fields()[6], value);
       this.email = value;
       fieldSetFlags()[6] = true;
@@ -602,7 +602,7 @@ public class CustomerV2 extends org.apache.avro.specific.SpecificRecordBase impl
       * email address
       * @return This builder.
       */
-    public Builder clearEmail() {
+    public CustomerV2.Builder clearEmail() {
       email = null;
       fieldSetFlags()[6] = false;
       return this;
