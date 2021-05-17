@@ -6,21 +6,5 @@
   "age": 25,
   "height": 5.2,
   "weight": 65,
-
-
-  "firstName": "thahir",
-  "lastName": "ahmed",
-  "age": 25,
-  "height": 5.2,
-  "weight": 65,
-  "automatedEmail": false,
-
-
-  "firstName": "thahir",
-  "lastName": "ahmed",
-  "age": 25,
-  "height": 5.2,
-  "weight": 65,
-  "phoneNumber": "4567891256",
-  "email": "abc@gmail.com"
+  "automatedEmail": false
 }

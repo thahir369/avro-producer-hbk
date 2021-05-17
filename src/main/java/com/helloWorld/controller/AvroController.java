@@ -1,7 +1,6 @@
 package com.helloWorld.controller;
 
 import com.helloWorld.avro.CustomerV1;
-import com.helloWorld.avro.CustomerV2;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.avro.specific.SpecificRecord;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,16 +32,4 @@ public class AvroController {
 
         return "CustomerV1 Data published successfully!!!!";
     }
-
-    @PostMapping("/publish2")
-    public String publishCustomerV2(@RequestBody final CustomerV2 data) {
-
-        kafkaTemplate.send(topicName,data);
-
-        log.info("published below customer data");
-        log.info(data.toString());
-
-        return "CustomerV2 Data published successfully!!!!";
-    }
-
 }
